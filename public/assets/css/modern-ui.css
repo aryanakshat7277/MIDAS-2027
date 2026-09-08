@@ -2029,186 +2029,299 @@ body.mobile-nav-active #mobile-nav {
   flex-shrink: 0;
 }
 
-/* Milestone Timeline Roadmap (Importantdates.html) */
+/* ==========================================================
+   Milestone Timeline & Flow Roadmap (Importantdates.html)
+   ========================================================== */
 .timeline-roadmap {
   position: relative;
   padding: 10px 0 25px;
   margin-bottom: 30px;
 }
 
-.timeline-roadmap-track {
+/* 1. Top Lifecycle Stepper Rail */
+.stepper-rail-wrap {
+  position: relative;
+  margin-bottom: 32px;
+  padding: 10px 15px 22px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.stepper-rail-track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
 }
 
-.timeline-step-card {
-  flex: 0 0 100%;
-  max-width: 100%;
+.stepper-rail-line {
+  position: absolute;
+  top: 18px;
+  left: 25px;
+  right: 25px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-navy) 0%, var(--accent-teal) 50%, var(--accent-gold) 100%);
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.stepper-rail-node {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  padding: 0 6px;
+}
+
+.stepper-node-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2.5px solid var(--primary-navy);
+  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 2px 8px rgba(12, 46, 138, 0.12);
+  transition: all var(--transition-fast);
+  margin-bottom: 8px;
+}
+
+.stepper-rail-node:hover .stepper-node-circle {
+  transform: scale(1.12);
+  background: var(--primary-navy);
+  color: #ffffff;
+}
+
+.stepper-rail-node.node-final .stepper-node-circle {
+  border-color: var(--accent-gold);
+  color: #d97706;
+  background: #fffbeb;
+}
+
+.stepper-node-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  max-width: 120px;
+  line-height: 1.25;
+}
+
+.stepper-node-sub {
+  font-size: 10px;
+  color: #64748b;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* 2. Connected Flow Cards Grid */
+.flow-grid-track {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.flow-tier {
+  display: flex;
+  align-items: stretch;
+  gap: 12px;
+  position: relative;
+}
+
+.flow-step-box {
+  flex: 1;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: var(--radius-lg);
-  padding: 20px 18px;
-  box-shadow: 0 4px 16px -2px rgba(12, 46, 138, 0.05);
-  transition: all var(--transition-normal);
-  position: relative;
+  padding: 18px 16px;
+  box-shadow: 0 3px 12px rgba(12, 46, 138, 0.04);
+  border-top: 3.5px solid var(--primary-navy);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top: 3.5px solid var(--primary-navy);
+  min-height: 165px;
+  transition: all var(--transition-normal);
+  position: relative;
   overflow: hidden;
-  min-height: 195px;
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
-  .timeline-step-card {
-    flex: 0 0 calc(50% - 12px);
-    max-width: calc(50% - 12px);
-  }
-}
-
-@media (min-width: 992px) {
-  .timeline-step-card {
-    flex: 0 0 calc(25% - 15px);
-    max-width: calc(25% - 15px);
-  }
-}
-
-.timeline-step-card:hover {
+.flow-step-box:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 25px -4px rgba(12, 46, 138, 0.12);
-  border-color: var(--accent-teal);
-  border-top-color: var(--accent-teal-dark);
+  box-shadow: 0 10px 24px rgba(12, 46, 138, 0.1);
+  border-top-color: var(--accent-teal);
 }
 
-.timeline-step-watermark {
-  position: absolute;
-  top: 4px;
-  right: 10px;
-  font-size: 38px;
-  font-weight: 900;
-  font-family: 'Montserrat', sans-serif;
-  color: rgba(12, 46, 138, 0.04);
-  line-height: 1;
-  pointer-events: none;
-  user-select: none;
-}
-
-.timeline-step-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  position: relative;
-  z-index: 1;
-}
-
-.timeline-step-icon-wrap {
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, rgba(12, 46, 138, 0.08) 0%, rgba(80, 216, 175, 0.15) 100%);
-  color: var(--primary-navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
-  transition: all var(--transition-fast);
-}
-
-.timeline-step-card:hover .timeline-step-icon-wrap {
-  background: var(--primary-navy);
-  color: #ffffff;
-  transform: scale(1.06);
-}
-
-.timeline-step-pill {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
-  background: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
-}
-
-.timeline-step-title {
-  font-size: 14.5px;
-  font-weight: 700;
-  color: var(--primary-navy);
-  margin-bottom: 14px;
-  line-height: 1.4;
-  position: relative;
-  z-index: 1;
-  min-height: 46px;
-  display: flex;
-  align-items: center;
-}
-
-.timeline-step-date-pill {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  padding: 8px 11px;
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--primary-navy);
-  transition: all var(--transition-fast);
-  position: relative;
-  z-index: 1;
-  min-height: 42px;
-}
-
-.timeline-step-date-pill sup {
-  font-size: 0.72em;
-  vertical-align: super;
-  line-height: 0;
-}
-
-.timeline-step-card:hover .timeline-step-date-pill {
-  background: #ffffff;
-  border-color: var(--accent-teal);
-  box-shadow: 0 2px 8px rgba(80, 216, 175, 0.18);
-}
-
-/* Step 7 (Main Conference Milestone) */
-.timeline-step-card.step-conference {
+.flow-step-box.event-final {
   border-top-color: var(--accent-gold);
   background: linear-gradient(180deg, #ffffff 0%, #fffbeb 100%);
 }
 
-.timeline-step-card.step-conference .timeline-step-watermark {
-  color: rgba(245, 158, 11, 0.08);
+.flow-watermark {
+  position: absolute;
+  top: 2px;
+  right: 8px;
+  font-size: 36px;
+  font-weight: 900;
+  color: rgba(12, 46, 138, 0.035);
+  font-family: 'Montserrat', sans-serif;
+  pointer-events: none;
+  user-select: none;
 }
 
-.timeline-step-card.step-conference .timeline-step-icon-wrap {
-  background: rgba(245, 158, 11, 0.18);
+.flow-box-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(12, 46, 138, 0.06);
+  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.flow-step-box.event-final .flow-icon-circle {
+  background: rgba(245, 158, 11, 0.15);
   color: #d97706;
 }
 
-.timeline-step-card.step-conference .timeline-step-pill {
-  background: #fef3c7;
-  color: #92400e;
-  border-color: #fde68a;
+.flow-phase-tag {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  background: #f1f5f9;
+  color: #475569;
 }
 
-.timeline-step-card.step-conference .timeline-step-date-pill {
+.flow-step-box.event-final .flow-phase-tag {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.flow-box-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin-bottom: 14px;
+  line-height: 1.4;
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.flow-date-badge {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  position: relative;
+  z-index: 1;
+  min-height: 38px;
+}
+
+.flow-step-box.event-final .flow-date-badge {
   background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-dark) 100%);
   color: #ffffff;
   border-color: var(--primary-navy);
-  box-shadow: 0 4px 12px rgba(12, 46, 138, 0.2);
+  box-shadow: 0 3px 10px rgba(12, 46, 138, 0.2);
 }
 
-.timeline-step-card.step-conference:hover .timeline-step-date-pill {
-  background: var(--primary-navy-dark);
-  border-color: var(--accent-teal);
+/* Forward Flow Connector Arrow */
+.flow-forward-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  align-self: center;
+  flex-shrink: 0;
+  color: var(--accent-teal);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.flow-forward-arrow i {
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  color: var(--primary-navy);
+}
+
+/* Inter-Tier Progression Conduit */
+.flow-tier-bridge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 2px 0;
+}
+
+.flow-bridge-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(90deg, rgba(80, 216, 175, 0.12) 0%, rgba(12, 46, 138, 0.08) 50%, rgba(80, 216, 175, 0.12) 100%);
+  border: 1px dashed rgba(12, 46, 138, 0.25);
+  border-radius: var(--radius-full);
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.flow-bridge-line i {
+  color: var(--accent-teal);
+  font-size: 11px;
+}
+
+/* Responsive Rules for Flow Structure */
+@media (max-width: 991px) {
+  .stepper-rail-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 15px;
+  }
+  .stepper-rail-track {
+    min-width: 720px;
+  }
+  .flow-tier {
+    flex-direction: column;
+  }
+  .flow-forward-arrow {
+    transform: rotate(90deg);
+    margin: 6px 0;
+    align-self: center;
+  }
 }
 
 /* ==========================================================

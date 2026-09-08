@@ -90,125 +90,171 @@
                         <h2>Conference Timeline & Deadlines</h2>
                     </div>
 
-                    <!-- 7-Step Milestone Roadmap -->
+                    <!-- Chronological Flow Pipeline (Macro Stepper Rail + Connected Flow Grid) -->
                     <div class="timeline-roadmap">
-                        <div class="timeline-roadmap-track">
-                            <!-- Step 1 -->
-                            <div class="timeline-step-card">
-                                <span class="timeline-step-watermark">01</span>
-                                <div>
-                                    <div class="timeline-step-header">
-                                        <div class="timeline-step-icon-wrap">
-                                            <i class="fa-solid fa-file-lines"></i>
-                                        </div>
-                                        <span class="timeline-step-pill">Step 01</span>
-                                    </div>
-                                    <div class="timeline-step-title">Start of Paper Submission (Full Paper)</div>
+                        <!-- 1. Top Lifecycle Stepper Rail -->
+                        <div class="stepper-rail-wrap">
+                            <div class="stepper-rail-track">
+                                <div class="stepper-rail-line"></div>
+                                
+                                <div class="stepper-rail-node">
+                                    <div class="stepper-node-circle">01</div>
+                                    <div class="stepper-node-label">Paper Submission</div>
+                                    <div class="stepper-node-sub">15 Jul 2026</div>
                                 </div>
-                                <div class="timeline-step-date-pill">
-                                    <i class="fa-regular fa-calendar-plus text-primary"></i> <span>15<sup>th</sup> July, 2026</span>
+                                
+                                <div class="stepper-rail-node">
+                                    <div class="stepper-node-circle">02</div>
+                                    <div class="stepper-node-label">Submission Deadline</div>
+                                    <div class="stepper-node-sub">30 Nov 2026</div>
+                                </div>
+                                
+                                <div class="stepper-rail-node">
+                                    <div class="stepper-node-circle">03</div>
+                                    <div class="stepper-node-label">Revision Notice</div>
+                                    <div class="stepper-node-sub">25 Dec 2026</div>
+                                </div>
+                                
+                                <div class="stepper-rail-node">
+                                    <div class="stepper-node-circle">04</div>
+                                    <div class="stepper-node-label">Revised Submit</div>
+                                    <div class="stepper-node-sub">05 Jan 2027</div>
+                                </div>
+                                
+                                <div class="stepper-rail-node">
+                                    <div class="stepper-node-circle">05</div>
+                                    <div class="stepper-node-label">Acceptance Notice</div>
+                                    <div class="stepper-node-sub">15 Feb 2027</div>
+                                </div>
+                                
+                                <div class="stepper-rail-node">
+                                    <div class="stepper-node-circle">06</div>
+                                    <div class="stepper-node-label">Camera-Ready</div>
+                                    <div class="stepper-node-sub">25 Feb 2027</div>
+                                </div>
+                                
+                                <div class="stepper-rail-node node-final">
+                                    <div class="stepper-node-circle"><i class="fa-solid fa-star"></i></div>
+                                    <div class="stepper-node-label" style="color: #d97706;">Conference Dates</div>
+                                    <div class="stepper-node-sub" style="color: #d97706; font-weight: 700;">21-22 Mar 2027</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. Connected Flow Cards Grid -->
+                        <div class="flow-grid-track">
+                            <!-- Tier 1: Inception to Revision (Steps 1 - 4) -->
+                            <div class="flow-tier">
+                                <!-- Step 1 -->
+                                <div class="flow-step-box">
+                                    <span class="flow-watermark">01</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle"><i class="fa-solid fa-file-arrow-up"></i></div>
+                                        <span class="flow-phase-tag">Step 01</span>
+                                    </div>
+                                    <div class="flow-box-title">Start of Paper Submission (Full Paper)</div>
+                                    <div class="flow-date-badge"><i class="fa-regular fa-calendar-check text-primary"></i> <span>15<sup>th</sup> July, 2026</span></div>
+                                </div>
+
+                                <div class="flow-forward-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                                <!-- Step 2 -->
+                                <div class="flow-step-box">
+                                    <span class="flow-watermark">02</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle" style="color: #ef4444; background: rgba(239, 68, 68, 0.08);"><i class="fa-solid fa-hourglass-half"></i></div>
+                                        <span class="flow-phase-tag">Step 02</span>
+                                    </div>
+                                    <div class="flow-box-title">Last Date of Paper Submission</div>
+                                    <div class="flow-date-badge"><i class="fa-regular fa-clock text-danger"></i> <span>30<sup>th</sup> Nov / 10<sup>th</sup> Dec 2026</span></div>
+                                </div>
+
+                                <div class="flow-forward-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                                <!-- Step 3 -->
+                                <div class="flow-step-box">
+                                    <span class="flow-watermark">03</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle"><i class="fa-solid fa-arrows-rotate"></i></div>
+                                        <span class="flow-phase-tag">Step 03</span>
+                                    </div>
+                                    <div class="flow-box-title">Notification of Revision</div>
+                                    <div class="flow-date-badge"><i class="fa-regular fa-calendar-check text-primary"></i> <span>25<sup>th</sup> December, 2026</span></div>
+                                </div>
+
+                                <div class="flow-forward-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+
+                                <!-- Step 4 -->
+                                <div class="flow-step-box">
+                                    <span class="flow-watermark">04</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle"><i class="fa-solid fa-file-pen"></i></div>
+                                        <span class="flow-phase-tag">Step 04</span>
+                                    </div>
+                                    <div class="flow-box-title">Revised Paper Submission</div>
+                                    <div class="flow-date-badge"><i class="fa-regular fa-calendar-days text-primary"></i> <span>05<sup>th</sup> January, 2027</span></div>
                                 </div>
                             </div>
 
-                            <!-- Step 2 -->
-                            <div class="timeline-step-card">
-                                <span class="timeline-step-watermark">02</span>
-                                <div>
-                                    <div class="timeline-step-header">
-                                        <div class="timeline-step-icon-wrap">
-                                            <i class="fa-solid fa-hourglass-half"></i>
-                                        </div>
-                                        <span class="timeline-step-pill">Step 02</span>
-                                    </div>
-                                    <div class="timeline-step-title">Last Date of Paper Submission</div>
-                                </div>
-                                <div class="timeline-step-date-pill">
-                                    <i class="fa-regular fa-clock text-danger"></i> <span>30<sup>th</sup> Nov / 10<sup>th</sup> Dec 2026</span>
+                            <!-- Flow Conduit Bridge -->
+                            <div class="flow-tier-bridge">
+                                <div class="flow-bridge-line">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                    <span>Lifecycle Flow Continues: Acceptance, Camera-Ready & Conference Event</span>
+                                    <i class="fa-solid fa-chevron-down"></i>
                                 </div>
                             </div>
 
-                            <!-- Step 3 -->
-                            <div class="timeline-step-card">
-                                <span class="timeline-step-watermark">03</span>
-                                <div>
-                                    <div class="timeline-step-header">
-                                        <div class="timeline-step-icon-wrap">
-                                            <i class="fa-solid fa-arrows-rotate"></i>
-                                        </div>
-                                        <span class="timeline-step-pill">Step 03</span>
+                            <!-- Tier 2: Decision, Registration & Conference Event (Steps 5 - 7 + Venue) -->
+                            <div class="flow-tier">
+                                <!-- Step 5 -->
+                                <div class="flow-step-box">
+                                    <span class="flow-watermark">05</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle" style="color: #10b981; background: rgba(16, 185, 129, 0.08);"><i class="fa-solid fa-circle-check"></i></div>
+                                        <span class="flow-phase-tag">Step 05</span>
                                     </div>
-                                    <div class="timeline-step-title">Notification of Revision</div>
+                                    <div class="flow-box-title">Notification of Acceptance</div>
+                                    <div class="flow-date-badge"><i class="fa-regular fa-circle-check text-success"></i> <span>15<sup>th</sup> February, 2027</span></div>
                                 </div>
-                                <div class="timeline-step-date-pill">
-                                    <i class="fa-regular fa-calendar-check text-primary"></i> <span>25<sup>th</sup> December, 2026</span>
-                                </div>
-                            </div>
 
-                            <!-- Step 4 -->
-                            <div class="timeline-step-card">
-                                <span class="timeline-step-watermark">04</span>
-                                <div>
-                                    <div class="timeline-step-header">
-                                        <div class="timeline-step-icon-wrap">
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </div>
-                                        <span class="timeline-step-pill">Step 04</span>
-                                    </div>
-                                    <div class="timeline-step-title">Revised Paper Submission</div>
-                                </div>
-                                <div class="timeline-step-date-pill">
-                                    <i class="fa-regular fa-calendar-days text-primary"></i> <span>05<sup>th</sup> January, 2027</span>
-                                </div>
-                            </div>
+                                <div class="flow-forward-arrow"><i class="fa-solid fa-arrow-right"></i></div>
 
-                            <!-- Step 5 -->
-                            <div class="timeline-step-card">
-                                <span class="timeline-step-watermark">05</span>
-                                <div>
-                                    <div class="timeline-step-header">
-                                        <div class="timeline-step-icon-wrap">
-                                            <i class="fa-solid fa-circle-check"></i>
-                                        </div>
-                                        <span class="timeline-step-pill">Step 05</span>
+                                <!-- Step 6 -->
+                                <div class="flow-step-box">
+                                    <span class="flow-watermark">06</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle"><i class="fa-solid fa-id-card"></i></div>
+                                        <span class="flow-phase-tag">Step 06</span>
                                     </div>
-                                    <div class="timeline-step-title">Notification of Acceptance</div>
+                                    <div class="flow-box-title">Camera-Ready Papers & Registration</div>
+                                    <div class="flow-date-badge"><i class="fa-regular fa-calendar-check text-primary"></i> <span>25<sup>th</sup> February, 2027</span></div>
                                 </div>
-                                <div class="timeline-step-date-pill">
-                                    <i class="fa-regular fa-circle-check text-success"></i> <span>15<sup>th</sup> February, 2027</span>
-                                </div>
-                            </div>
 
-                            <!-- Step 6 -->
-                            <div class="timeline-step-card">
-                                <span class="timeline-step-watermark">06</span>
-                                <div>
-                                    <div class="timeline-step-header">
-                                        <div class="timeline-step-icon-wrap">
-                                            <i class="fa-solid fa-id-card"></i>
-                                        </div>
-                                        <span class="timeline-step-pill">Step 06</span>
-                                    </div>
-                                    <div class="timeline-step-title">Camera-Ready Papers & Registration</div>
-                                </div>
-                                <div class="timeline-step-date-pill">
-                                    <i class="fa-regular fa-calendar-check text-primary"></i> <span>25<sup>th</sup> February, 2027</span>
-                                </div>
-                            </div>
+                                <div class="flow-forward-arrow"><i class="fa-solid fa-arrow-right text-warning"></i></div>
 
-                            <!-- Step 7: Conference Event -->
-                            <div class="timeline-step-card step-conference">
-                                <span class="timeline-step-watermark">07</span>
-                                <div>
-                                    <div class="timeline-step-header">
-                                        <div class="timeline-step-icon-wrap">
-                                            <i class="fa-solid fa-calendar-check"></i>
-                                        </div>
-                                        <span class="timeline-step-pill">Step 07</span>
+                                <!-- Step 7: Conference Event -->
+                                <div class="flow-step-box event-final">
+                                    <span class="flow-watermark" style="color: rgba(245, 158, 11, 0.08);">07</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle"><i class="fa-solid fa-calendar-check"></i></div>
+                                        <span class="flow-phase-tag">Step 07</span>
                                     </div>
-                                    <div class="timeline-step-title">MIDAS-2027 Conference Dates</div>
+                                    <div class="flow-box-title">MIDAS-2027 Conference Dates</div>
+                                    <div class="flow-date-badge"><i class="fa-solid fa-star text-warning"></i> <span>21<sup>st</sup> - 22<sup>nd</sup> March, 2027</span></div>
                                 </div>
-                                <div class="timeline-step-date-pill">
-                                    <i class="fa-solid fa-star text-warning"></i> <span>21<sup>st</sup> - 22<sup>nd</sup> March, 2027</span>
+
+                                <div class="flow-forward-arrow"><i class="fa-solid fa-arrow-right text-success"></i></div>
+
+                                <!-- Step 8: Conference Delivery & Venue -->
+                                <div class="flow-step-box" style="border-top-color: #50d8af; background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);">
+                                    <span class="flow-watermark" style="color: rgba(80, 216, 175, 0.1);">CUTM</span>
+                                    <div class="flow-box-top">
+                                        <div class="flow-icon-circle" style="color: #059669; background: rgba(16, 185, 129, 0.12);"><i class="fa-solid fa-location-dot"></i></div>
+                                        <span class="flow-phase-tag" style="background: #dcfce7; color: #166534;">Venue & Mode</span>
+                                    </div>
+                                    <div class="flow-box-title" style="font-size: 13.5px;">Centurion University (CUTM), Paralakhemundi</div>
+                                    <div class="flow-date-badge" style="background: #ffffff; font-size: 11.5px;"><i class="fa-solid fa-video text-success"></i> <span>Hybrid: In-Person & Online</span></div>
                                 </div>
                             </div>
                         </div>
