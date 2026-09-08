@@ -80,9 +80,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Clear fixed header on all inner pages */
-body:not(.home-page) #main {
-  padding-top: var(--header-height) !important;
+/* Header clearance on inner pages:
+   .sticky-wrapper already occupies --header-height (90px) in document flow,
+   so #main starts immediately below the header with 0 gap. */
+body:not(.home-page) #main,
+#main {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
   min-height: 80vh;
 }
 
@@ -832,6 +836,7 @@ body.mobile-nav-active #mobile-nav {
 .page-title-banner {
   background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-navy-dark) 100%);
   padding: 38px 0 34px;
+  margin-top: 0 !important;
   margin-bottom: 35px;
   position: relative;
   border-bottom: 3px solid var(--accent-teal);
