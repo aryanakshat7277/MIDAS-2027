@@ -1,0 +1,13 @@
+﻿# OS metadata
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Python temporary files
+__pycache__/
+*.pyc
+*.pyo
+
+# Scratch files
+scratch/
