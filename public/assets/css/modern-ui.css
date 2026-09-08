@@ -161,8 +161,7 @@ body:not(.home-page) #main,
 }
 
 #logo-right {
-  display: flex;
-  align-items: center;
+  display: none !important;
 }
 
 .nav-image {
@@ -189,6 +188,7 @@ body:not(.home-page) #main,
 #nav-menu-container {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .nav-menu {
@@ -336,12 +336,11 @@ body:not(.home-page) #main,
   #mobile-nav-toggle {
     display: flex !important;
     position: static !important;
-    margin: 0 0 0 12px !important;
+    margin: 0 0 0 auto !important;
   }
   
   #logo-right {
-    display: flex !important;
-    align-items: center !important;
+    display: none !important;
   }
   
   .nav-image {
