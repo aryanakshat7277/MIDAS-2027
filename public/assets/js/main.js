@@ -164,4 +164,25 @@ jQuery(document).ready(function($) {
             }
         });
     }
+
+    // Live Conference Countdown Timer
+    if ($('#countdown-days').length) {
+        var conferenceTarget = new Date('2027-03-21T09:00:00+05:30').getTime();
+        function updateConferenceCountdown() {
+            var now = new Date().getTime();
+            var diff = conferenceTarget - now;
+            if (diff > 0) {
+                var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                var secs = Math.floor((diff % (1000 * 60)) / 1000);
+                $('#countdown-days').text(days < 10 ? '0' + days : days);
+                $('#countdown-hours').text(hours < 10 ? '0' + hours : hours);
+                $('#countdown-mins').text(mins < 10 ? '0' + mins : mins);
+                $('#countdown-secs').text(secs < 10 ? '0' + secs : secs);
+            }
+        }
+        updateConferenceCountdown();
+        setInterval(updateConferenceCountdown, 1000);
+    }
 });
