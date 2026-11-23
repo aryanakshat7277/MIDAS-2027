@@ -60,6 +60,13 @@
                             <li><a href="./photoGallery.html">Photo Gallery</a></li>
                         </ul>
                     </li>
+                    <li class="menu-has-children"><a href="#">Our Previous Conference</a>
+                        <ul>
+                            <li><a href="./previous-conference.html">MIDAS 2025</a></li>
+                            <li><a href="https://link.springer.com/book/10.1007/978-3-032-35516-4" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Proceedings (SCOPUS Indexed)</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="./contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -111,9 +118,12 @@
                                         <li><i class="fa fa-check text-success me-2"></i>Screen sharing enabled for accepted paper presenters</li>
                                     </ul>
                                 </div>
-                                <a href="./Online Presentation Schedule-MIDAS 2027.pdf" target="_blank" class="btn-midas-primary w-100 justify-content-center">
-                                    <i class="fa fa-file-pdf me-1"></i> View Online Schedule (PDF)
-                                </a>
+                                <button type="button" class="btn-midas-primary w-100 justify-content-center" onclick="showScheduleNotice('Online Presentation Schedule')">
+                                    <i class="fa fa-calendar-check me-2"></i> View Online Schedule
+                                </button>
+                                <div id="onlineNotice" class="alert alert-warning text-center py-2 px-3 mt-3 mb-0" style="display: none; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid #fde68a; background: #fef3c7; color: #92400e;">
+                                    <i class="fa-solid fa-clock me-1"></i> Will be updated soon
+                                </div>
                             </div>
                         </div>
 
@@ -130,16 +140,19 @@
                                             <span class="badge bg-success text-white mt-1">On-Campus Physical Track</span>
                                         </div>
                                     </div>
-                                    <p class="text-muted small mb-3">View and download the in-person presentation schedule at Centurion University campus.</p>
+                                    <p class="text-muted small mb-3">View the in-person presentation schedule at Centurion University campus.</p>
                                     <ul class="list-unstyled small text-muted d-flex flex-column gap-1 mb-4">
                                         <li><i class="fa fa-check text-success me-2"></i>Venue: School of Engineering & Technology, CUTM Campus</li>
                                         <li><i class="fa fa-check text-success me-2"></i>Smart classrooms equipped with podium AV projection</li>
                                         <li><i class="fa fa-check text-success me-2"></i>Presenter reporting: 15 minutes before session commencement</li>
                                     </ul>
                                 </div>
-                                <a href="./MIDAS-2027 Offline Presentation Schedule.pdf" target="_blank" class="btn-midas-accent w-100 justify-content-center">
-                                    <i class="fa fa-download me-1"></i> View Offline Schedule (PDF)
-                                </a>
+                                <button type="button" class="btn-midas-accent w-100 justify-content-center" onclick="showScheduleNotice('Offline Presentation Schedule')">
+                                    <i class="fa fa-calendar-check me-2"></i> View Offline Schedule
+                                </button>
+                                <div id="offlineNotice" class="alert alert-warning text-center py-2 px-3 mt-3 mb-0" style="display: none; border-radius: 10px; font-weight: 700; font-size: 13.5px; border: 1px solid #fde68a; background: #fef3c7; color: #92400e;">
+                                    <i class="fa-solid fa-clock me-1"></i> Will be updated soon
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -152,6 +165,57 @@
                 </div>
             </div>
         </section>
+
+        <!-- Schedule Update Notice Modal -->
+        <div class="modal fade" id="scheduleModal" tabindex="-1" role="dialog" aria-labelledby="scheduleModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content" style="border-radius: 16px; border: none; box-shadow: 0 12px 40px rgba(0,0,0,0.18);">
+                    <div class="modal-header" style="border-bottom: 1px solid #e2e8f0; background: #f8fafc; border-top-left-radius: 16px; border-top-right-radius: 16px; padding: 18px 24px;">
+                        <h5 class="modal-title font-weight-bold" id="scheduleModalTitle" style="color: var(--primary-navy); font-size: 18px; margin: 0;">
+                            <i class="fa-solid fa-clock text-warning me-2"></i> Schedule Update Notice
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="font-size: 24px; color: #64748b; opacity: 0.8; padding: 0; background: none; border: none;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center py-4 px-4">
+                        <div class="mb-3">
+                            <div style="width: 64px; height: 64px; background: rgba(245, 158, 11, 0.15); color: #d97706; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 28px;">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                        </div>
+                        <h4 style="font-weight: 800; color: #1e293b; margin-bottom: 8px; font-size: 20px;">Will be updated</h4>
+                        <p class="text-muted mb-0" id="scheduleModalText" style="font-size: 15px; line-height: 1.6;">
+                            The technical presentation schedule for MIDAS-2027 is currently being finalized and will be updated soon.
+                        </p>
+                    </div>
+                    <div class="modal-footer" style="border-top: 1px solid #e2e8f0; background: #f8fafc; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px; padding: 12px 24px;">
+                        <button type="button" class="btn btn-secondary px-4 py-2" data-dismiss="modal" style="border-radius: 8px; font-weight: 600;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function showScheduleNotice(trackType) {
+                var modalText = document.getElementById('scheduleModalText');
+                if (modalText) {
+                    modalText.innerHTML = 'The <strong>' + trackType + '</strong> for MIDAS-2027 is currently being finalized and will be updated soon.';
+                }
+                if (typeof $ !== 'undefined' && $('#scheduleModal').modal) {
+                    $('#scheduleModal').modal('show');
+                } else {
+                    alert(trackType + ': Will be updated');
+                }
+                if (trackType.indexOf('Online') !== -1) {
+                    var el = document.getElementById('onlineNotice');
+                    if (el) el.style.display = 'block';
+                } else {
+                    var el = document.getElementById('offlineNotice');
+                    if (el) el.style.display = 'block';
+                }
+            }
+        </script>
     </main>
 
     <footer id="footer">
@@ -171,8 +235,13 @@
                         <span class="separator-dot">•</span>
                         <a href="./contact.html">Contact</a>
                     </div>
-                    <div class="copyright">
+                                        <div class="copyright">
                         &copy; Copyright <strong>MIDAS</strong>. All Rights Reserved
+                    </div>
+                    <div class="credits-badge">
+                        <i class="fa-solid fa-laptop-code text-teal me-1"></i>
+                        <span>Designed &amp; Developed by</span>
+                        <span class="developer-name">AKSHAT ARYAN</span>
                     </div>
                 </div>
             </div>

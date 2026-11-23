@@ -59,6 +59,13 @@
                             <li><a href="./photoGallery.html">Photo Gallery</a></li>
                         </ul>
                     </li>
+                    <li class="menu-has-children"><a href="#">Our Previous Conference</a>
+                        <ul>
+                            <li><a href="./previous-conference.html">MIDAS 2025</a></li>
+                            <li><a href="https://link.springer.com/book/10.1007/978-3-032-35516-4" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square me-1"></i> Proceedings (SCOPUS Indexed)</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="./contact.html">Contact Us</a></li>
                 </ul>
             </nav>
@@ -95,48 +102,128 @@
                         The specific topics of the conference include, but are not limited to:
                     </h4>
 
-                    <div class="row g-4 mb-4">
-                        <!-- Track 1 -->
-                        <div class="col-lg-6">
-                            <div class="track-card">
-                                <h3><i class="fa fa-cogs text-primary me-2"></i> Track 1: Intelligent Systems</h3>
-                                <p class="text-muted small mb-3"><strong>Subtracks:</strong></p>
-                                <div class="subtracks-chips">
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Machine Learning</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Deep Learning</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Expert Systems</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Artificial Intelligence</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Neural Networks</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Track 2 -->
-                        <div class="col-lg-6">
-                            <div class="track-card">
-                                <h3><i class="fa fa-database text-primary me-2"></i> Track 2: Data Science Applications</h3>
-                                <p class="text-muted small mb-3"><strong>Subtracks:</strong></p>
-                                <div class="subtracks-chips">
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Data Management and Quality Analysis</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Big Data Analysis</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Data Warehousing</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Data Security and Privacy</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Data Mining</span>
-                                    <span class="subtrack-chip"><i class="fa fa-check text-success me-1"></i> Data Visualizations</span>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Conference Topics Table -->
+                    <div class="table-responsive mb-4">
+                        <table class="table table-bordered mb-0" style="border: 1.5px solid #cbd5e1; border-collapse: collapse; width: 100%; background: #ffffff;">
+                            <thead>
+                                <tr style="background: linear-gradient(135deg, #0c2e8a 0%, #1e40af 100%); color: #ffffff;">
+                                    <th style="width: 50%; padding: 14px 20px; font-size: 16px; font-weight: 700; border: 1.5px solid #cbd5e1; vertical-align: middle;">
+                                        <i class="fa fa-cogs me-2"></i> Track 1: Intelligent Systems
+                                    </th>
+                                    <th style="width: 50%; padding: 14px 20px; font-size: 16px; font-weight: 700; border: 1.5px solid #cbd5e1; vertical-align: middle;">
+                                        <i class="fa fa-database me-2"></i> Track 2: Data Science Applications
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 22px 24px; border: 1.5px solid #cbd5e1; vertical-align: top; background-color: #f8fafc;">
+                                        <p style="font-weight: 700; color: #0c2e8a; margin-bottom: 12px; font-size: 15.5px;">Subtracks:</p>
+                                        <ul style="list-style-type: disc; padding-left: 22px; margin-bottom: 0; line-height: 2.1; color: #334155; font-size: 15px;">
+                                            <li>Machine Learning</li>
+                                            <li>Deep Learning</li>
+                                            <li>Expert Systems</li>
+                                            <li>Artificial Intelligence</li>
+                                            <li>Neural Networks</li>
+                                        </ul>
+                                    </td>
+                                    <td style="padding: 22px 24px; border: 1.5px solid #cbd5e1; vertical-align: top; background-color: #f8fafc;">
+                                        <p style="font-weight: 700; color: #0c2e8a; margin-bottom: 12px; font-size: 15.5px;">Subtracks:</p>
+                                        <ul style="list-style-type: disc; padding-left: 22px; margin-bottom: 0; line-height: 2.1; color: #334155; font-size: 15px;">
+                                            <li>Data Management and Quality Analysis</li>
+                                            <li>Big Data Analysis</li>
+                                            <li>Data Warehousing</li>
+                                            <li>Data Security and Privacy</li>
+                                            <li>Data Mining</li>
+                                            <li>Data Visualizations</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
 
-                    <!-- Note Card -->
-                    <div class="p-4 rounded border-start border-4 border-danger bg-light mb-4">
-                        <div class="d-flex align-items-start gap-3">
-                            <i class="fa fa-info-circle text-danger mt-1" style="font-size: 22px;"></i>
-                            <div>
-                                <strong class="text-danger" style="font-size: 16px;">NOTE:</strong>
-                                <p style="text-align: justify; line-height: 1.8; margin-bottom: 0; color: #334155; margin-top: 4px;">
-                                    All submitted conference papers will be blind peer reviewed by three competent reviewers. It is planned to publish the proceedings with Springer in their Communications in Computer and Information Science series (final approval pending).
-                                </p>
+                    <!-- NOTE Section matching exact instructions -->
+                    <div class="p-4 rounded border-start border-4 border-danger mb-4 shadow-sm" style="background-color: #fff1f2; border-color: #e11d48 !important;">
+                        <h5 class="fw-bold text-danger mb-3" style="letter-spacing: 0.05em; font-size: 17px;">
+                            <i class="fa fa-circle-exclamation me-2"></i> NOTE:
+                        </h5>
+                        <p style="text-align: justify; line-height: 1.85; margin-bottom: 12px; color: #334155; font-size: 15px;">
+                            All submitted conference papers will be blind peer reviewed by three competent reviewers.
+                        </p>
+                        <p style="text-align: justify; line-height: 1.85; margin-bottom: 0; color: #334155; font-size: 15px;">
+                            It is planned to publish the proceedings with <strong>Springer</strong> in their <strong>Communications in Computer and Information Science</strong> series (approval pending) which is <strong>SCOPUS Indexed</strong>.
+                        </p>
+                    </div>
+
+                    <!-- IMPORTANT DATES & MILESTONES Section -->
+                    <div class="my-4">
+                        <div class="p-4 rounded border bg-light mb-4 shadow-sm">
+                            <h3 class="fw-bold mb-3" style="color: var(--primary-navy); font-size: 20px; letter-spacing: 0.03em;">
+                                <i class="fa fa-calendar-check text-primary me-2"></i> IMPORTANT DATES & MILESTONES
+                            </h3>
+                            <div class="dates-timeline-card">
+                                <div class="dates-timeline-header">
+                                    <span><i class="fa fa-calendar-check-o me-2"></i> Milestone Event</span>
+                                    <span>Schedule Date</span>
+                                </div>
+                                <div class="dates-timeline-body">
+                                    <div class="dates-timeline-row">
+                                        <div class="dates-row-left">
+                                            <div class="dates-row-icon"><i class="fa-solid fa-file-lines"></i></div>
+                                            <div class="dates-row-info">
+                                                <span class="dates-row-title">Paper Submission open</span>
+                                            </div>
+                                        </div>
+                                        <div class="dates-chip">
+                                            <i class="fa-regular fa-calendar-plus text-primary"></i> <span>15<sup>th</sup> December 2026</span>
+                                        </div>
+                                    </div>
+                                    <div class="dates-timeline-row">
+                                        <div class="dates-row-left">
+                                            <div class="dates-row-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                                            <div class="dates-row-info">
+                                                <span class="dates-row-title">Paper Submission close</span>
+                                            </div>
+                                        </div>
+                                        <div class="dates-chip">
+                                            <i class="fa-regular fa-clock text-danger"></i> <span>15<sup>th</sup> March 2027</span>
+                                        </div>
+                                    </div>
+                                    <div class="dates-timeline-row">
+                                        <div class="dates-row-left">
+                                            <div class="dates-row-icon"><i class="fa-solid fa-circle-check"></i></div>
+                                            <div class="dates-row-info">
+                                                <span class="dates-row-title">Notification of Acceptance</span>
+                                            </div>
+                                        </div>
+                                        <div class="dates-chip">
+                                            <i class="fa-regular fa-circle-check text-success"></i> <span>10<sup>th</sup> June 2027</span>
+                                        </div>
+                                    </div>
+                                    <div class="dates-timeline-row">
+                                        <div class="dates-row-left">
+                                            <div class="dates-row-icon"><i class="fa-solid fa-id-card"></i></div>
+                                            <div class="dates-row-info">
+                                                <span class="dates-row-title">Start date of registration & camera ready submission</span>
+                                            </div>
+                                        </div>
+                                        <div class="dates-chip">
+                                            <i class="fa-regular fa-calendar-check text-primary"></i> <span>20 June 2027</span>
+                                        </div>
+                                    </div>
+                                    <div class="dates-timeline-row dates-row-featured">
+                                        <div class="dates-row-left">
+                                            <div class="dates-row-icon"><i class="fa-solid fa-flag-checkered"></i></div>
+                                            <div class="dates-row-info">
+                                                <span class="dates-row-title" style="color: var(--primary-navy);">Conference Dates</span>
+                                            </div>
+                                        </div>
+                                        <div class="dates-chip">
+                                            <i class="fa-solid fa-star text-warning"></i> <span>30–31 July 2027</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -167,8 +254,13 @@
                         <span class="separator-dot">•</span>
                         <a href="./contact.html">Contact</a>
                     </div>
-                    <div class="copyright">
+                                        <div class="copyright">
                         &copy; Copyright <strong>MIDAS</strong>. All Rights Reserved
+                    </div>
+                    <div class="credits-badge">
+                        <i class="fa-solid fa-laptop-code text-teal me-1"></i>
+                        <span>Designed &amp; Developed by</span>
+                        <span class="developer-name">AKSHAT ARYAN</span>
                     </div>
                 </div>
             </div>
