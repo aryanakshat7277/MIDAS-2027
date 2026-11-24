@@ -519,13 +519,13 @@ body.mobile-nav-active #mobile-nav {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   position: relative;
 }
 
 .hero-logo-left,
 .hero-logo-right {
-  flex: 0 0 100px;
+  flex: 0 0 54px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,39 +534,46 @@ body.mobile-nav-active #mobile-nav {
 .hero-header-center {
   flex: 1 1 auto;
   text-align: center;
-  padding: 0 12px;
+  padding: 0 10px;
 }
 
 .hero-logo-img {
-  max-height: 82px;
-  max-width: 95px;
+  max-height: 48px;
+  max-width: 52px;
   width: auto;
   object-fit: contain;
-  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.08));
+  border-radius: 6px;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08));
   transition: transform var(--transition-fast);
 }
 
 .hero-logo-midas {
-  border-radius: 50%;
-  border: 2px solid #ffffff;
-  box-shadow: 0 4px 14px rgba(12, 46, 138, 0.16);
+  width: 48px;
+  height: 48px;
+  border-radius: 50% !important;
+  border: 1.5px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(12, 46, 138, 0.18);
 }
 
 .hero-logo-img:hover {
-  transform: scale(1.06);
+  transform: scale(1.08);
 }
 
 @media (max-width: 768px) {
   .hero-card-header-row {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
   .hero-logo-left,
   .hero-logo-right {
-    flex: 0 0 54px;
+    flex: 0 0 42px;
   }
   .hero-logo-img {
-    max-height: 54px;
-    max-width: 54px;
+    max-height: 38px;
+    max-width: 40px;
+  }
+  .hero-logo-midas {
+    width: 38px;
+    height: 38px;
   }
   .hero-header-center {
     padding: 0 6px;
@@ -576,11 +583,15 @@ body.mobile-nav-active #mobile-nav {
 @media (max-width: 480px) {
   .hero-logo-left,
   .hero-logo-right {
-    flex: 0 0 42px;
+    flex: 0 0 34px;
   }
   .hero-logo-img {
-    max-height: 44px;
-    max-width: 42px;
+    max-height: 32px;
+    max-width: 34px;
+  }
+  .hero-logo-midas {
+    width: 32px;
+    height: 32px;
   }
   .hero-header-center {
     padding: 0 4px;
