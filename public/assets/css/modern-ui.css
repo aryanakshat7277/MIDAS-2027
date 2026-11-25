@@ -605,25 +605,23 @@ body.mobile-nav-active #mobile-nav {
   }
 }
 
-.hero-badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 5px 18px !important;
-  border-radius: var(--radius-full);
+.hero-conf-tier {
+  display: block;
   font-family: 'Times New Roman', Times, serif !important;
-  font-size: 14px !important;
+  font-size: 23px !important;
   font-weight: 700 !important;
-  letter-spacing: 0.02em !important;
-  margin-bottom: 4px !important;
-  transition: var(--transition-fast);
+  color: #0c2e8a !important;
+  letter-spacing: 0.03em !important;
+  line-height: 1.25 !important;
+  margin: 0 0 3px 0 !important;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(12, 46, 138, 0.06);
 }
 
-.hero-badge-primary {
-  background: rgba(80, 216, 175, 0.16) !important;
-  color: #065f46 !important;
-  border: 1px solid rgba(80, 216, 175, 0.5) !important;
-  box-shadow: 0 2px 10px rgba(80, 216, 175, 0.2) !important;
+.hero-conf-tier sup {
+  font-size: 0.65em;
+  vertical-align: super;
+  line-height: 0;
 }
 
 .hero-on-label {
@@ -4426,11 +4424,10 @@ a, p, span, li, h1, h2, h3, h4, h5, h6 {
     height: 44px !important;
   }
   
-  .hero-badge-pill {
-    font-size: 11.5px !important;
-    padding: 4px 10px !important;
+  .hero-conf-tier {
+    font-size: 15.5px !important;
     line-height: 1.25 !important;
-    white-space: normal !important;
+    margin: 0 0 2px 0 !important;
   }
   
   .hero-on-label {
