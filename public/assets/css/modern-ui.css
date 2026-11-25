@@ -2076,6 +2076,8 @@ body.mobile-nav-active #mobile-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px;
   width: 100%;
   margin-bottom: 6px;
 }
