@@ -1129,9 +1129,10 @@ body.mobile-nav-active #mobile-nav-toggle {
         margin: 10px 0;
     }
     .count-down-main {
-        flex-direction: column;
-        gap: 14px;
-        padding: 18px 16px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 8px;
+        padding: 14px 10px;
     }
     #contact .form button[type=submit] {
         width: 100%;
